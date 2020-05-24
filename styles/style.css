@@ -1,0 +1,675 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+  /*  font-family: 'Advent Pro', sans-serif; */
+  /*  font-family: 'Encode Sans', sans-serif;*/
+    font-family: 'Quattrocento Sans', sans-serif;
+}
+input[name=play]{
+    display: none;
+}
+h1,h2,h3,h4{
+    color: #969696;
+    font-size: 6vw;
+    letter-spacing: 3px;
+   /* font-family: 'Croissant One', cursive;*/
+    font-family: 'Expletus Sans', cursive;
+  /* font-family: 'Julius Sans One', sans-serif;*/
+  /* font-family: 'Lancelot', cursive;*/
+  /* font-family: 'Baumans', cursive;*/
+}
+h1{
+    font-size: 7vw;
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 7vh 10vh 10vh 4vh 30vh 4vh 10vh 16vh 8vh;  
+    height: 100vh;
+    transition: .5s;   
+}
+.menu-ico{
+    position: relative;
+    width: 7vw;
+    z-index: 50;
+}
+.menu-ico img{
+    width: 100%;
+}
+input[name=menu]{
+    display: none;
+}
+header{
+    background-color: white;
+   grid-column: 1/6;
+    grid-row: 1/1;
+    display: flex;
+    padding: 3%;
+    z-index: 100;
+    transition: background-color .5s;
+}
+ul{    
+    display: flex;  
+    justify-content: space-between;
+    width: 65%;  
+    position: absolute;
+    right: 117%;
+    font-size: 5vw;
+    transition: right ease-in-out .4s;
+}
+li{
+    color: #585858;
+    margin: 0 15%;
+    width: 100%;
+    padding: 0 2%;
+    height: 5vh;
+}
+.side-menu{
+    display: none;
+
+}
+
+.gui-icon,.mantram-icon,.reminder-icon{
+    position: relative;
+}
+.gui-icon img,.mantram-icon img,.reminder-icon img{
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.gico-on{
+    display: none;    
+}
+.smmico-on{
+    display: none;    
+}
+.smrico-on{
+    display: none;   
+}
+.gmeditations,.mantramss{
+    z-index: 10;
+    position: absolute;
+    top: -150%;
+    height: 100vh;
+    width: 100vw;   
+    background: linear-gradient(90deg, rgba(255,255,255,0.8995973389355743) 1%, rgba(250,249,253,1) 50%, rgba(245,244,251,0.76234243697479) 100%);
+    transition:  1s;   
+}
+.section-title{
+    padding: 5%;
+    display: flex;
+    margin-top: 20%;
+}
+.section-title h2{
+    font-size: 5.5vw;
+    margin: 2% 0;
+}
+.cont-container h3{
+    font-size: 5vw;
+}
+.cont-container{
+    font-size: 3.6vw;
+}
+.stimg{
+    position: relative;
+    width: 20%;
+    text-align: center;
+}
+.stimg img{
+    width:70%;
+}
+.guide-ico-on{
+    position: absolute;
+}
+.guide-ico-off{
+    position: absolute;
+    display: none;
+}
+.X{
+    width: 6%;
+    position: absolute;
+    top: 9%;
+    right: 10%;
+}
+.X img{
+    width: 100%;
+}
+.ccc{
+    
+    height: 75vh;
+    overflow: scroll;
+}
+.cont-container{
+    display: flex;
+    color: #6d6d6d;
+    padding: 5%;
+    border-radius: 20px;
+    background-color: #f5f5ff;
+    box-shadow: 5px 8px 15px 0px rgba(0,0,0,0.47);
+    width: 80%;
+    margin: 5% auto 5% auto;
+}
+.play-cont{
+    margin: auto 8%;
+    width: 45%;
+    max-width: 70px;
+    height: 6vh;    
+    box-shadow: inset 0px 0px 10px 4px rgba(10, 10, 10, 0.64);
+    background: radial-gradient(ellipse at center, rgba(165,126,242,1) 5%, rgba(164,125,242,1) 6%, rgba(123,78,234,1) 79%, rgba(123,78,234,1) 100%);
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+    transition: clip-path .3s;    
+}
+input[name=submenu]{
+    display: none;
+}
+input[name=timer-m]{
+    display: none;
+}
+input[name=sounds]{
+    display: none;
+}
+input[name=mode]{
+    display: none;
+}
+.sign{
+    grid-row: 3;
+    grid-column: 1/6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sign img{
+    width: 25%;
+    opacity: .7;
+    margin-right: 1.7vw;
+    position: absolute;
+}
+.play::after{    
+    border-radius: 100%;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: inset 20px 19px 24px -11px rgba(255,255,255,1);
+    -moz-box-shadow: inset 20px 19px 24px -11px rgba(255,255,255,1);
+    box-shadow: inset 9px 11px 11px 0px rgba(255,255,255,1);
+}
+.play{
+    position: relative;
+    margin: 10% auto;
+    width: 70%;
+    height: 80%;
+    max-height: 170px;
+    -webkit-box-shadow: 5px 10px 16px 2px rgba(89,89,89,.6);
+    -moz-box-shadow: 5px 10px 16px 2px rgba(89,89,89,.6);
+    box-shadow: 5px 10px 16px 2px rgba(89,89,89,.6);
+    border-radius: 100%;    
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 30%, rgba(223,219,237,1) 90%);
+    grid-row: 5;
+    grid-column: 2/5;
+}
+.play-buton{
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    transform: translate(90%,80%);
+    box-shadow: inset 0px 0px 10px 4px rgba(10, 10, 10, 0.64);
+    background: radial-gradient(ellipse at center, rgba(165,126,242,1) 5%, rgba(164,125,242,1) 6%, rgba(123,78,234,1) 79%, rgba(123,78,234,1) 100%);
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+    transition:  .3s;
+}
+.timer{
+    width: 75%;
+    margin: 0 auto;
+    -webkit-box-shadow: inset 0px 0px 5px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: inset 0px 0px 5px 2px rgba(0,0,0,0.3);
+    box-shadow: inset 0px 0px 5px 2px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    background:linear-gradient(to bottom, rgb(241, 241, 241) 0%, rgb(255, 255, 255) 50%, rgb(236, 236, 236) 100%);
+    grid-column: 1/6;
+    grid-row: 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.timer img{
+    width: 6%;   
+    margin-right: 2%;
+}
+.buton-timer1,.buton-timer2,.buton-timer3,.buton-timer4{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    color: #9c9cb7;
+    background-color: #f5f5ff;
+    border-radius: 8px;
+    padding: 1.2%;
+    width: 15%;
+    height: 60%;
+    margin: 0 1.4%;
+    font-size: 4.5vw;
+    text-align: center;   
+    box-shadow: 3px 4px 6px 0px rgba(86, 86, 86, 0.7);
+    transition: box-shadow .2s;
+}
+.light/*,.lightS1,.lightS2*/{
+    border-radius: 10px;
+    width: 90%;
+    height: 12%;
+    margin: 0 auto;
+    background-color: #918caa;
+    overflow: hidden;
+    transition: background-color .3s;
+}
+.lightOfButon1, .lightOfButon2, .lightOfButon3{
+    width: 100%;
+    position: relative;
+    left: -100%;
+    height: 5px;
+    transition: left ease-in-out .3s;
+    background-color: rgb(121, 56, 206);
+}
+.lightT1,.lightT2,.lightT3,.lightT4{
+    border-radius: 10px;
+    width: 90%;
+    height: 12%;
+    margin: 0 auto;
+    background-color: #918caa;
+    transition: ease-in .2s;
+}
+.sounds{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 80%;
+    max-width: 200px;
+   /* padding: 3%;*/
+    position: relative;
+    top: -30%;
+    left: 15%;
+    /*border-radius: 15px;
+    -webkit-box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.3);
+    -moz-box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.3);
+    box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.3);
+    background:linear-gradient(to bottom, rgb(241, 241, 241) 0%, rgb(255, 255, 255) 50%, rgb(236, 236, 236) 100%);*/
+    grid-row: 9;
+    grid-column: 1/3;
+   
+}
+.sounds img{
+    width: 12%;
+}
+.buton-sound1,.buton-sound2{    
+    /*background-color: #f5f5ff;*/
+    border-radius: 5px;
+   /* box-shadow: 3px 4px 5px 0px rgba(86, 86, 86, 0.6);*/
+    width: 25%;
+    height: 4vh;
+    text-align: center;
+}
+.sounds-bowl,.sounds-bell{
+    position: relative;
+    width: 100%;
+    /*height: 70%;
+    margin: 10% auto 0;*/
+}
+.sounds-bell{
+    margin-top: 0;
+    margin-bottom: 10%;
+}
+.bowloff,.bowlon,.belloff,.bellon{
+    position: absolute;
+    width: 100%;
+}
+.bowlon,.bellon{
+    opacity: 0;
+    transition: .3s;
+}
+.bowloff img,.bowlon img,.belloff img,.bellon img{
+    width: 100%;
+}
+.bowlon img,.bowloff img{
+    margin-top: 14%;
+}
+.mode{
+    max-width: 70%;
+    position: relative;
+    top: -30%;
+    right: 5%;
+    opacity: .7;
+    display: flex;
+    align-items: center;   
+    grid-column: 5/5;
+    grid-row: 9;
+}
+.sun,.moon{
+    position: relative;
+    width: 55%;
+    height: 80%;
+    margin: 0 5%;
+}
+.sun img{
+    position: absolute;
+    width: 100%;
+}
+.moon img{
+    position: absolute;
+   width:78% ;
+   
+}
+.sun img:nth-child(2){
+    display: none;
+}
+.moon img:nth-child(1){
+    display: none;
+}
+#menu:checked ~ ul{
+    right: 17%;
+}
+#guided:checked ~ * .gb{
+    color: #2c0fba;
+}
+#guided:checked ~ * .lightOfButon1{
+    left:0;
+}
+#guided:checked ~ .gmeditations{
+    top:0;
+}
+#guided:checked ~ * .gico-on{
+    display: block;
+}
+#mantrams:checked ~ * .mb{
+    color: #2c0fba;
+}
+#mantrams:checked ~ * .lightOfButon2{
+    left:0;
+}
+#mantrams:checked ~ .mantramss{
+    top:0;
+}
+#mantrams:checked ~ * .smmico-on{
+    display: block;
+}
+#reminder:checked ~ * .rb{
+    color: #2c0fba;
+}
+#reminder:checked ~ * .lightOfButon3{
+    left:0;
+}
+#reminder:checked ~ * .smrico-on{
+    display: block;
+}
+#play:checked ~ * {
+    background-color: black;
+}
+#play:checked ~ * header {   
+    background-color: black;
+    box-shadow: 5px 0px 6px 0px rgba(86, 86, 86, 0);
+}
+#play:checked ~ * .menu-ico {
+    display: none;    
+}
+#play:checked ~ * ul {
+    display: none;   
+}
+#play:checked ~ * .timer {
+    display: none;
+    background: black;
+}
+#play:checked ~ * .play {
+    background: black;
+}
+#play:checked ~ * .sounds {
+    display: none;
+    background: black;
+}
+#play:checked ~ * .play-buton {
+    clip-path:polygon(10% 20%, 90% 20%, 90% 100%, 10% 100%);
+   transform: translate(75%,75%);
+  
+}
+#play:checked ~ * .sign {
+    display: none;
+    background: black;
+}
+#play:checked ~ * .mode {
+    display: none;   
+}
+#play:checked ~ * .side-menu {
+    display: none;    
+}
+#first-opt:checked ~ * .buton-timer1{
+    color: #2c0fba;
+    box-shadow: 0px 0px 6px 0px rgba(86, 86, 86, 0.7);
+    
+}
+#first-opt:checked ~ * .lightT1{
+    background-color: #2c0fba;    
+}
+#second-opt:checked ~ * .buton-timer2{
+    color: #2c0fba;
+    box-shadow: 0px 0px 6px 0px rgba(86, 86, 86, 0.7);    
+}
+#second-opt:checked ~ * .lightT2{
+    background-color: #2c0fba;    
+}
+#thirt-opt:checked ~ * .buton-timer3{
+    color: #2c0fba;
+    box-shadow: 0px 0px 6px 0px rgba(86, 86, 86, 0.7);    
+}
+#thirt-opt:checked ~ * .lightT3{
+    background-color: #2c0fba;    
+}
+#fourt-opt:checked ~ * .buton-timer4{
+    color: #2c0fba;
+    box-shadow: 0px 0px 6px 0px rgba(86, 86, 86, 0.7);    
+}
+#fourt-opt:checked ~ * .lightT4{
+    background-color: #2c0fba;    
+}
+#bowl:checked ~ * .bowlon{
+    opacity: 1;
+
+}
+#bowl:checked ~ * .lightS1{
+    background-color: #2c0fba; 
+
+}
+/*#bowl:checked ~ * .buton-sound1{
+    box-shadow: 0px 0px 5px 0px rgba(86, 86, 86, 0.6);
+}*/
+#bell:checked ~ * .bellon{
+    opacity: 1;
+
+}
+#bell:checked ~ * .lightS2{
+    background-color: #2c0fba; 
+
+}
+#moon:checked ~ * {
+    background-color: black;   
+}
+#moon:checked ~ * header {
+    background-color: black;      
+}
+#moon:checked ~ * li {
+   color: white;     
+}
+/*#bell:checked ~ * .buton-sound2{
+    box-shadow: 0px 0px 5px 0px rgba(86, 86, 86, 0.6);
+}*/
+@media (min-width:600px){
+    .play{
+        max-height: 250px;
+        max-width: 250px;
+    }
+    .timer{
+        width: 63%;        
+    }
+    .buton-timer1,.buton-timer2,.buton-timer3,.buton-timer4{
+        width: 17%;
+        font-size: 4vw;
+    }
+}
+@media (orientation:landscape){
+    main{
+        grid-template-columns: 15vw 15vw 50vw 12vw 8vw;
+        grid-template-rows: 20vh 5vh 45vh 5vh 10vh 5vh 10vh;
+    }
+    .menu-ico{
+        display: none;
+    }
+    ul{
+        display: none;
+    }
+    header{
+        grid-column: 1;
+        grid-row: 1/8;
+        box-shadow: 5px 0px 6px 0px rgba(86, 86, 86, 0.5);
+    }
+    .side-menu{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 80vh;
+        margin: 5% auto;
+        justify-content: space-evenly;
+    }
+    .side-menu li{
+        color: #585858;
+        font-size: 1.5vw;
+        text-align: center;
+        margin-top: 120%;
+        margin-left: -2%;
+    }
+    .sign{
+        grid-row: 1;
+        grid-column: 3/4;
+    }
+    .sign h1{
+        font-size: 4vw;
+    }
+    .sign img{
+        width: 15%;
+        max-width: 190px;
+    }
+    .play{
+        grid-column: 3/4;
+        grid-row: 3;
+        max-width: 390px;
+        max-height: none;
+        width: 60%;
+        margin: auto;
+    }
+    .timer{
+        grid-column: 3/4;
+        grid-row: 5;
+        width: 80%;       
+    }
+    .buton-timer1, .buton-timer2, .buton-timer3, .buton-timer4{
+        height: 60%;
+        font-size: 2.5vw;
+    }
+    .lightT1, .lightT2, .lightT3, .lightT4{
+        display: none;
+        min-height: 3px;
+    }
+    .sounds{
+        grid-row: 7;
+        grid-column: 1;
+        z-index: 1000;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .mode{
+        grid-row: 1;
+        grid-column: 5; 
+        right: 0; 
+        top: 0;
+        max-width: 70PX;
+        opacity: .7;
+    }
+    .buton-sound1, .buton-sound2{
+      /*  height: 5vh;
+        padding: 3%;*/
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .light, .lightS1, .lightS2{
+        display: none;
+    }
+    .sounds-bowl, .sounds-bell{
+        width: 100%;
+    }
+    .bellon,.belloff{
+        width: 100%;
+    }
+    .belloff img,.bellon img{
+        width: 100%;
+    }   
+    .gmeditations, .mantramss{
+        display: grid;
+        grid-template-columns: 15vw  65vw 10vw;
+        grid-template-rows: 15vh 5vh 75vh;
+        top: 0;
+        left: -150vw;
+    }
+    .section-title{
+        grid-column: 2/5;
+        grid-row: 1;
+        margin: 0;
+    }
+    .section-title h2{
+        font-size: 3vw;
+    }    
+    .ccc{
+        grid-row: 3;
+        grid-column: 2/5;
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        align-content: flex-start;
+        padding: 3%;
+    }
+    .cont-container{
+        font-size: 1.5vw;
+        padding: 3%;
+        width: 45%;        
+        margin: 2% auto;
+    }
+    .cont-container h3{
+        font-size: 2.5vw;
+    }
+    .stimg{
+        width: 7%;
+        top: 10%;
+    }
+    .X{
+        width: 15%;
+        grid-column: 3;
+        grid-row: 1;
+    }
+    .play-cont{       
+        height: 8vh;
+        width: 30%;
+        margin: auto 5%;
+    }
+/* CHEKED*/
+    #guided:checked ~ .gmeditations{
+        
+        left: 0;
+        transition: .8s;
+    }
+    #mantrams:checked ~ .mantramss{
+        left: 0;
+        transition: .8s;
+    }
+
+}
